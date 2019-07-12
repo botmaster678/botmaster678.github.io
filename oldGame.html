@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="Style.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+        
+        <div class="menu">
+            <a href="index.html">Home Page</a>
+            <a href="food.html">Food Page</a>
+            <a href="MyOpinions.html">My Opinions Page</a>
+            <a href="MusicVideos.html">Music and Videos</a>
+            <a href="Games.html">Games</a>
+        </div>
+        
+        
+        
+        <div>
+            <h1> Ninja Clicker </h1>
+            <button onclick="incrementScore()">Click me</button>
+            <h2 id="score">0</h2>
+        </div>
+        
+        
+    <script>
+        var score = 0;
+        const remarks = ["Click me!", "Yeah", "Faster","More"];
+        function incrementScore(){
+            document.getElementsByTagName("button")
+            [0].innerHTML= remarks[Math.floor(Math.random()*remarks.length)];
+            score++;
+            document.getElementById("score").innerHTML = score;
+        }
+    </script>
+    </body>
+</html>
+
+
